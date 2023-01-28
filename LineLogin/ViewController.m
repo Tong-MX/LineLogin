@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [LineLogin registerLine];
     LineLogin *line = [LineLogin getSharedInstance];
     [line loginLineFromController:self completeWithError:^(LoginResultStatus loginStatus, NSString * _Nullable token, NSString * _Nullable emali, NSError * _Nullable error) {
         if (loginStatus == LoginResultStatusSuccess) {

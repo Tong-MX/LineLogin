@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [LineLogin registerLine];
     return YES;
 }
 
@@ -39,7 +40,7 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    if ([url.scheme isEqualToString:@"line3rdp.com.qifan.bobi"]) {
+    if ([url.scheme isEqualToString:@"line3rdp.yourbundleid"]) {
         return [LineLogin applicationOpenurl:app open:url];
     }
     return false;
